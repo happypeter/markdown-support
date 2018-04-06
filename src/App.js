@@ -1,21 +1,16 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Markdown from 'react-markdown'
+import { section1 } from './constants/Content.js'
 
 class App extends Component {
   render() {
+    console.log(section1)
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Markdown source={section1} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
